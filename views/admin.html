@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include header.html %>
+
+  <body>
+
+    <!--[if lt IE 9]>
+        <style type="text/css">
+          #input-name {
+            font-size: 30px;
+          }
+        </style>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+<p class="chromeframe" style="color: #b2b8c6; font-size: 2em;">You are using an <strong>unsupported</strong> browser. 
+Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="input_box">
+      <form id="add_stuff">
+        <div class="form_section">
+          <div id="order_number" class="form_field_label admin_label">Order Number</div>
+          <input type="text" id="order_num" class="form_field" value=""/>
+          <div id="image_field_label" class="form_field_label admin_label">Initial Image or URL</div>
+          <input type="text" id="proj_link_0" class="form_field" value=""/>
+          <div id="thumb_field_label" class="form_field_label admin_label">Rel</div>
+          <input type="text" id="proj_rel" class="form_field" value=""/>
+          <div id="title_field_label" class="form_field_label admin_label">Fancybox Title/Description</br>Use 'em' tags for title</div>
+          <input type="text" id="proj_title" class="form_field" value=""/>
+          <div class="form_field_label admin_label">Project Role</div>
+          <input type="text" id="proj_role" class="form_field" value=""/>
+
+          <!-- <div class="separator"></div> -->
+
+          <div class="form_field_label admin_label">Thumbnail</div>
+          <input type="text" id="proj_thumb" class="form_field" value=""/>
+          <div class="form_field_label admin_label">Header</div>
+          <input type="text" id="proj_header" class="form_field" value=""/>
+          <div class="form_field_label admin_label">Header Description</div>
+          <input type="text" id="proj_desc" class="form_field" value=""/>
+        </div>
+
+        <div class="form_section">
+          <div class="form_field_label admin_label">Link 1</div>
+          <input type="text" id="proj_link_1" class="form_field" value=""/>
+          <div class="form_field_label admin_label">Link 1 Description</div>
+          <input type="text" id="proj_link_1_title" class="form_field" value=""/>
+          <div class="form_field_label admin_label">Link 1 Role</div>
+          <input type="text" id="proj_link_1_role" class="form_field" value=""/>
+
+          <!-- <div class="separator"></div> -->
+
+          <div class="form_field_label admin_label">Link 2</div>
+          <input type="text" id="proj_link_2" class="form_field" value=""/>
+          <div class="form_field_label admin_label">Link 2 Description</div>
+          <input type="text" id="proj_link_2_title" class="form_field" value=""/>
+          <div class="form_field_label admin_label">Link 2 Role</div>
+          <input type="text" id="proj_link_2_role" class="form_field" value=""/>
+
+          <!-- <div class="separator"></div> -->
+
+          <div class="form_field_label admin_label">Link 3</div>
+          <input type="text" id="proj_link_3" class="form_field" value=""/>
+          <div class="form_field_label admin_label">Link 3 Description</div>
+          <input type="text" id="proj_link_3_title" class="form_field" value=""/>
+          <div class="form_field_label admin_label">Link 3 Role</div>
+          <input type="text" id="proj_link_3_role" class="form_field" value=""/>
+        </div>
+
+        <div class="button_row">
+          <input type="radio" id="work_radio" class="form_radio" name="proj_type" value="work"/>
+          <span id="work_radio_label" class="bottom_input_label admin_label">Work</span>
+
+          <input type="radio" id="art_radio" class="form_radio" name="proj_type" value="art"/>
+          <span id="art_radio_label" class="bottom_input_label admin_label">Art</span>
+
+          <input type="radio" id="pics_radio" class="form_radio" name="proj_type" value="pics"/>
+          <span id="pics_radio_label" class="bottom_input_label admin_label">Pics</span>
+
+          <input type="checkbox" id="url_check" class="form_check" name="proj_is_url"/>
+          <span id="url_check_label" class="bottom_input_label admin_label">Is This a URL?</span>
+
+          <input type="checkbox" id="iframe_check" class="form_check" name="proj_is_iframe"/>
+          <span id="iframe_check_label" class="bottom_input_label admin_label">Is This an iFrame?</span>
+
+          <input type="checkbox" id="new_line_check" class="form_check" name="proj_new_line"/>
+          <span id="new_line_label" class="bottom_input_label admin_label">New Line?</span>
+        </div>
+
+        <div class="form_section">
+  	    	<input type="button" value="Submit" id="submit_btn" class="admin_btn"/>
+        </div>
+    	</form>
+    </div>	
+
+  <%- include footer.html %>
+  
+  <script src="js/views/admin.js"></script>
+
+  </body>
+</html>

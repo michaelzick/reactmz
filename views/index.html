@@ -1,0 +1,113 @@
+<%- include header.html %>
+<body>
+    <!--[if lt IE 9]>
+        <style type="text/css">
+          #input-name {
+            font-size: 30px;
+          }
+        </style>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+<p class="chromeframe" style="color: #b2b8c6; font-size: 2em;">You are using an <strong>unsupported</strong> browser.
+Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <script>
+        var workData = JSON.parse('<%-JSON.stringify(work)%>');
+        var artData = JSON.parse('<%-JSON.stringify(art)%>');
+        var picsData = JSON.parse('<%-JSON.stringify(pics)%>');
+        var aboutData = JSON.parse('<%-JSON.stringify(about)%>');
+        var skillsData = JSON.parse('<%-JSON.stringify(skills)%>');
+    </script>
+
+    <div id="bg"></div>
+      <div class="content">
+        <div class="row-fluid">
+          <div class="span12">
+
+          <!-- NAV -->
+          <div id="navComponent"></div>
+
+          <h1 id="my-name">michael zick</h1>
+
+          <div id="subclass">
+            <p>ui engineer : class a : v 3.1.0</p>
+            <p>this site is built on nodejs // express // ejs // react // mongodb</p>
+          </div>
+
+          <div id="socialwell">
+            <span><a href="http://www.linkedin.com/in/michaelzick" target="_blank">linkedin</a></span>
+            <span>&nbsp;:&nbsp;</span>
+            <span><a href="http://zickonezero.tumblr.com/" target="_blank">blog</a></span>
+            <span>&nbsp;:&nbsp;</span>
+            <span><a href="https://github.com/ZICKONEZERO?tab=repositories" target="_blank">github</a></span>
+            <!-- <span>&nbsp;:&nbsp;</span> -->
+            <!-- <span><a href="http://jsfiddle.net/ZICKONEZERO/m3Maf/" target="_blank">robot</a></span> -->
+          </div>
+
+          <div id="ascensorBuilding">
+            <section>
+              <!-- LOADER -->
+              <div id="loader"></div>
+
+              <h1 id="intro" class="typeText"></h1>
+              </br>
+              <form id="name-form">
+                <input id="input-name" maxlength=20 readonly="readonly" />
+                <h1 class="loopThis">Input Here</h1>
+              </form>
+            </section>
+
+            <section class="add-border">
+              <h1 id="section2-title">Corporate Entities</h1>
+              <div id="work" class="row-fluid">
+                  <!-- REACT WORK COMPONENT -->
+              </div>
+            </section>
+
+            <section class="add-border large-img">
+              <h1 id="section3-title">Cultural Artifacts</h1>
+              <div id="art" class="row-fluid">
+                  <!-- REACT ART COMPONENT -->
+              </div>
+            </section>
+
+            <section class="add-border large-img">
+              <h1 id="section4-title">Personnel</h1>
+              <div id="pics" class="row-fluid">
+                  <!-- REACT PICS COMPONENT -->
+              </div>
+            </section>
+
+            <section>
+              <h1 id="section5-title">Captain's Log</h1>
+              <div id="bio-box">
+                <!-- REACT ABOUT COMPONENT -->
+              </div>
+              <div id="qual-box">
+                <h1 id="qual-header">Qualifications</h1>
+                  <div id="skills-box">
+                    <!-- REACT SKILLS COMPONENT -->
+                  </div>
+              </div>
+            </section>
+
+            <div id="proj_img_links">
+              <div id="proj-imgs-1"></div>
+              <div id="proj-imgs-2"></div>
+              <div id="proj-imgs-3"></div>
+            </div>
+
+          </div> <!-- end #ascensorBuilding -->
+
+        </div> <!-- end .span12 -->
+
+      </div> <!-- end .row-fluid -->
+
+    </div> <!-- end .content -->
+
+    <!-- </div> --> <!-- END .container-fluid -->
+
+<%- include footer.html %>
+</body>
