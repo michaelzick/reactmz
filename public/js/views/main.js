@@ -40,21 +40,26 @@ const Main = (function () {
     }
 
     function myPlugins() {
-        jQuery.fn.typeText = function(theMessage) {
-            var strValue = theMessage;
-            var parseItLetter = strValue.split('');
-            var letterArray = [];
+        $.fn.typeText = function(theMessage) {
+            let strValue = theMessage,
+                parseItLetter = strValue.split(''),
+                letterArray = [],
+                l,
+                i = 0;
+
             $(this).empty();
 
-            for (i = 0; i < parseItLetter.length; i++) {
-                letterArray += parseItLetter[i];
+            for (let j = 0; j < parseItLetter.length; j++) {
+                letterArray += parseItLetter[j];
             }
-            var i = 0, l = letterArray.length;
+
+            l = letterArray.length;
+
             function f() {
                 $('.typeText').append(letterArray[i]);
                 i++;
-                if( i < l ){
-                  setTimeout( f, 40 );
+                if (i < l){
+                  setTimeout(f, 40);
                 } else {
                     if (hideThis != true) {
                         $('.loopThis').show().loopThis(600, 600, 0.4);
@@ -71,7 +76,7 @@ const Main = (function () {
             f();
         };
 
-        jQuery.fn.loopThis = function(duration1, duration2, op) {
+        $.fn.loopThis = function(duration1, duration2, op) {
             var runThis = {
                 repeatThis: function() {
                     $('.loopThis').animate({
