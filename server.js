@@ -37,9 +37,9 @@ app.get('/', function(req, res){
         if (err) {
           throw err;
         } else {
-          for (i=0; i<result.length; i++) {
+          result.forEach(function(item, i) {
             work[i] = result[i];
-          }
+          });
         }
       });
       db.collection("art", function(err, collection) {
@@ -47,9 +47,9 @@ app.get('/', function(req, res){
           if (err) {
             throw err;
           } else {
-            for (i=0; i<result.length; i++) {
+            result.forEach(function(item, i) {
               art[i] = result[i];
-            }
+            });
           }
         });
       });
@@ -58,9 +58,9 @@ app.get('/', function(req, res){
           if (err) {
             throw err;
           } else {
-            for (i=0; i<result.length; i++) {
+            result.forEach(function(item, i) {
               pics[i] = result[i];
-            }
+            });
           }
         });
       });
@@ -69,9 +69,9 @@ app.get('/', function(req, res){
           if (err) {
             throw err;
           } else {
-            for (i=0; i<result.length; i++) {
+            result.forEach(function(item, i) {
               about[i] = result[i];
-            }
+            });
           }
         });
       });
@@ -80,9 +80,9 @@ app.get('/', function(req, res){
           if (err) {
             throw err;
           } else {
-            for (i=0; i<result.length; i++) {
+            result.forEach(function(item, i) {
               skills[i] = result[i];
-            }
+            });
           }
         });
       });
