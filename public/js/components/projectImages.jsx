@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 var ProjectImages = React.createClass ({
     render: function () {
         return (
@@ -38,14 +41,14 @@ var ProjectImages = React.createClass ({
     }
 });
 
-React.render (
+ReactDOM.render (
     <ProjectImages dataFeed={workData}/>, document.getElementById('proj-imgs-1')
 );
 
-React.render (
+ReactDOM.render (
     <ProjectImages dataFeed={artData}/>, document.getElementById('proj-imgs-2')
 );
 
-React.render (
+ReactDOM.render (
     <ProjectImages dataFeed={picsData}/>, document.getElementById('proj-imgs-3')
 );

@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 var Skills = React.createClass ({
     render: function () {
         return (
@@ -14,6 +17,6 @@ var Skills = React.createClass ({
     }
 });
 
-React.render (
+ReactDOM.render (
     <Skills dataFeed={skillsData}/>, document.getElementById('skills-box')
 );
