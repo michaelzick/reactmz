@@ -7,8 +7,6 @@ const path = require('path');
 const config = {
   entry: {
     vendors: [
-      // '/home/ubuntu/workspace/public/js/vendor/react/react.js',
-      // '/home/ubuntu/workspace/public/js/vendor/react/jsx-transformer.js',
       '/home/ubuntu/workspace/public/js/vendor/jquery.easing-1.3.js',
       '/home/ubuntu/workspace/public/js/vendor/fancybox/lib/jquery.mousewheel-3.0.6.pack.js',
       '/home/ubuntu/workspace/public/js/vendor/fancybox/source/jquery.fancybox.pack.js',
