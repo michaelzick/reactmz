@@ -1,7 +1,7 @@
 'use strict';
 
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
-// const webpack = require('webpack'); //to access built-in plugins
+// const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
+const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 
 const config = {
@@ -30,17 +30,36 @@ const config = {
     filename: "[name].js", // string
   },
   module: {
-      loaders: [
-          {
-              test: /\.jsx?$/,
-              loader: 'babel-loader',
-              exclude: /node_modules/,
-              query: {
-                  presets: [['react']]
-              }
-          }
-      ]
-    }
+    loaders: [
+      {
+        test: /\.(js)?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: [
+            [
+              'es2015'
+            ]
+          ]
+        }
+      },
+      {
+        test: /\.(jsx)?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: [
+            [
+              'react'
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
+  ]
 };
 
 module.exports = config;
