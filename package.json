@@ -17,6 +17,7 @@
     "webpack": "^2.3.3"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "prod": "webpack --config webpack.config.js -p",
+    "dev": "webpack --config webpack.config.js"
   }
 }
