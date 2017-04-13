@@ -236,7 +236,7 @@ const Main = (function () {
 
     function checkCookie() {
         var username=getCookie("username");
-        if (username !== null && username !== "") {
+        if (username) {
             theMessage = "Welcome back " + username + ". Click on the logo to navigate.";
             setInputWidth(0);
             nameInput.attr('readonly', 'readonly');
