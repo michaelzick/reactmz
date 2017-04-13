@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 var About = React.createClass ({
     render: function () {
         return (
@@ -8,6 +11,6 @@ var About = React.createClass ({
     }
 });
 
-React.render (
+ReactDOM.render (
     <About dataFeed={aboutData}/>, document.getElementById('bio-box')
 );

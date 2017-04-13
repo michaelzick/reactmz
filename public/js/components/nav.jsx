@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 var Nav = React.createClass ({
   render: function () {
     return (
@@ -14,6 +17,6 @@ var Nav = React.createClass ({
   }
 });
 
-React.render (
+ReactDOM.render (
 	<Nav/>, document.getElementById('navComponent')
 );

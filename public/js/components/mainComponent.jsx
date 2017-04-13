@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 var MainComponent = React.createClass ({
     render: function () {
         return (
@@ -45,14 +48,14 @@ var MainComponent = React.createClass ({
     }
 });
 
-React.render (
+ReactDOM.render (
     <MainComponent dataFeed={workData}/>, document.getElementById('work')
 );
 
-React.render (
+ReactDOM.render (
     <MainComponent dataFeed={artData}/>, document.getElementById('art')
 );
 
-React.render (
+ReactDOM.render (
     <MainComponent dataFeed={picsData}/>, document.getElementById('pics')
 );

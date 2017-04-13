@@ -1,7 +1,7 @@
 var MainComponent = React.createClass ({displayName: "MainComponent",
     render: function () {
         return (
-            React.createElement("ul", {className: "thumbnails"}, 
+            React.createElement("ul", {className: "thumbnails"},
                 this.props.dataFeed.map(function(data, i) {
                     var newLine = "",
                         fancyBox = "fancybox",
@@ -24,17 +24,17 @@ var MainComponent = React.createClass ({displayName: "MainComponent",
                     }
 
                     return (
-                        React.createElement("li", {key: i, className: newLine + " " + span}, 
-                            React.createElement("a", {href: data.proj_link_0, 
-                                className: fancyBox + " thumbnail", 
-                                target: targetBlank, 
-                                "data-fancybox-type": isIframe, 
-                                rel: data.proj_rel, 
-                                title: data.proj_title + "</br>" + data.proj_role}, 
+                        React.createElement("li", {key: i, className: newLine + " " + span},
+                            React.createElement("a", {href: data.proj_link_0,
+                                className: fancyBox + " thumbnail",
+                                target: targetBlank,
+                                "data-fancybox-type": isIframe,
+                                rel: data.proj_rel,
+                                title: data.proj_title + "</br>" + data.proj_role},
                                 React.createElement("img", {src: data.proj_thumb})
-                            ), 
-                            React.createElement("div", {className: "caption"}, 
-                                React.createElement("h2", null, data.proj_header), 
+                            ),
+                            React.createElement("div", {className: "caption"},
+                                React.createElement("h2", null, data.proj_header),
                                 React.createElement("h3", {className: "lato description"}, data.proj_desc)
                             )
                         )
