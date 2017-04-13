@@ -7,21 +7,21 @@ const path = require('path');
 const config = {
   entry: {
     vendors: [
-      'public/js/vendor/jquery.easing-1.3.js',
-      'public/js/vendor/fancybox/lib/jquery.mousewheel-3.0.6.pack.js',
-      'public/js/vendor/fancybox/source/jquery.fancybox.pack.js',
-      'public/js/vendor/fancybox/source/helpers/jquery.fancybox-buttons.js',
-      'public/js/vendor/fancybox/source/helpers/jquery.fancybox-media.js',
-      'public/js/vendor/fancybox/source/helpers/jquery.fancybox-thumbs.js'
+      './public/js/vendor/jquery.easing-1.3.js',
+      './public/js/vendor/fancybox/lib/jquery.mousewheel-3.0.6.pack.js',
+      './public/js/vendor/fancybox/source/jquery.fancybox.pack.js',
+      './public/js/vendor/fancybox/source/helpers/jquery.fancybox-buttons.js',
+      './public/js/vendor/fancybox/source/helpers/jquery.fancybox-media.js',
+      './public/js/vendor/fancybox/source/helpers/jquery.fancybox-thumbs.js'
     ],
     jsx: [
-      'public/js/components/about.jsx',
-      'public/js/components/mainComponent.jsx',
-      'public/js/components/nav.jsx',
-      'public/js/components/projectImages.jsx',
-      'public/js/components/skills.jsx',
+      './public/js/components/about.jsx',
+      './public/js/components/mainComponent.jsx',
+      './public/js/components/nav.jsx',
+      './public/js/components/projectImages.jsx',
+      './public/js/components/skills.jsx',
     ],
-    app: 'public/js/views/app.js'
+    app: './public/js/views/app.js'
   },
   output: {
     path: path.resolve(__dirname, "public/build"), // string
