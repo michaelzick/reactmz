@@ -10,9 +10,13 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , busboy = require('express-busboy')
+  , methodOverride = require('method-override');
 
 var app = express();
+
+busboy.extend(app);
 
 var port = process.env.PORT || 80;
 var ipaddr = process.env.IP;
@@ -24,7 +28,7 @@ http.createServer(app).listen(port, ipaddr, function(){
 });
 
 // DB
-app.use(express.bodyParser());
+app.use(busboy);
 var MongoClient = require('mongodb').MongoClient;
 
 app.get('/', function(req, res){
@@ -145,8 +149,7 @@ app.engine('html', require('ejs').renderFile);
 
 app.use(express.favicon());
 app.use(express.logger('dev'));
-app.use(express.bodyParser());
-app.use(express.methodOverride());
+app.use(methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
