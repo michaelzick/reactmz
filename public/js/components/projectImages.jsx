@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var ProjectImages = React.createClass ({
-    render: function () {
+class ProjectImages extends React.Component {
+    render () {
         return (
             <span>
                 {this.props.dataFeed.map(function(data, i) {
@@ -39,7 +39,7 @@ var ProjectImages = React.createClass ({
             </span>
         );
     }
-});
+}
 
 ReactDOM.render (
     <ProjectImages dataFeed={workData}/>, document.getElementById('proj-imgs-1')
