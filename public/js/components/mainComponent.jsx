@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var MainComponent = React.createClass ({
-    render: function () {
+class MainComponent extends React.Component {
+    render () {
         return (
             <ul className="thumbnails">
                 {this.props.dataFeed.map(function(data, i) {
@@ -46,7 +46,7 @@ var MainComponent = React.createClass ({
             </ul>
         );
     }
-});
+}
 
 ReactDOM.render (
     <MainComponent dataFeed={workData}/>, document.getElementById('work')
