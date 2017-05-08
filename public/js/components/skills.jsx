@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var Skills = React.createClass ({
-    render: function () {
+class Skills extends React.Component {
+    render () {
         return (
             <ul>
                 {this.props.dataFeed.map(function(data, i) {
@@ -15,7 +15,7 @@ var Skills = React.createClass ({
             </ul>
         );
     }
-});
+}
 
 ReactDOM.render (
     <Skills dataFeed={skillsData}/>, document.getElementById('skills-box')
