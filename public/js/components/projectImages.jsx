@@ -6,7 +6,7 @@ class ProjectImages extends React.Component {
         return (
             <span>
                 {this.props.dataFeed.map(function(data, i) {
-                    var projLink1,
+                    let projLink1,
                         projLink2,
                         projLink3;
 

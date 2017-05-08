@@ -6,7 +6,7 @@ class MainComponent extends React.Component {
         return (
             <ul className="thumbnails">
                 {this.props.dataFeed.map(function(data, i) {
-                    var newLine = "",
+                    let newLine = "",
                         fancyBox = "fancybox",
                         targetBlank = "",
                         isIframe = "",
