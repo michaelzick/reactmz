@@ -29,30 +29,7 @@ const config = {
   },
   module: {
     loaders: [
-      {
-        test: /\.(js)?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: [
-            [
-              'es2015'
-            ]
-          ]
-        }
-      },
-      {
-        test: /\.(jsx)?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: [
-            [
-              'react'
-            ]
-          ]
-        }
-      }
+      {test: /\.jsx|js$/, loader: 'babel-loader', exclude: /(node_modules|bower_components)/, query: { presets: ['react', 'es2015'] }}
     ]
   },
   plugins: [

@@ -20,6 +20,6 @@
   },
   "scripts": {
     "prod": "webpack --config webpack.config.js -p",
-    "dev": "webpack --config webpack.config.js"
+    "dev": "webpack --config webpack.config.js -w"
   }
 }
