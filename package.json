@@ -19,7 +19,7 @@
     "webpack": "^2.3.3"
   },
   "scripts": {
-    "prod": "webpack --config webpack.config.js -p",
-    "dev": "webpack --config webpack.config.js -w"
+    "prod": "webpack --progress --config webpack.config.js -p",
+    "dev": "webpack --progress --config webpack.config.js -w"
   }
 }
