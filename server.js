@@ -107,7 +107,6 @@ app.get('/', function(req, res){
       });
     });
   });
-});
 
 app.post('/', function (req, res) {
   MongoClient.connect("mongodb://localhost:27017/michael", function(err, db) {
