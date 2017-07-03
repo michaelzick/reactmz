@@ -32,19 +32,27 @@ app.use(busboy);
 var MongoClient = require('mongodb').MongoClient;
 
 app.get('/', function(req, res){
-  MongoClient.connect("mongodb://localhost:27017/michaelmulti", function(err, db) {
-    if(!err) {
-      console.log("We are connected");
-    }
-    db.collection("work", function(err, collection) {
-      collection.find().sort({order_num: 1}).toArray(function(err, result) {
-        if (err) {
-          throw err;
-        } else {
-          result.forEach(function(item, i) {
-            work[i] = result[i];
-          });
-        }
+  MongoClient.connect("mongodb://localhost:27017/michaelmulti",
+    {
+      // retry to connect for 60 times
+      reconnectTries: 60,
+      // wait 1 second before retrying
+      reconnectInterval: 1000
+    },
+    function(err, db) {
+      if(!err) {
+        console.log("We are connected");
+      }
+      db.collection("work", function(err, collection) {
+        collection.find().sort({order_num: 1}).toArray(function(err, result) {
+          if (err) {
+            throw err;
+          } else {
+            result.forEach(function(item, i) {
+              work[i] = result[i];
+            });
+          }
+        });
       });
       db.collection("art", function(err, collection) {
         collection.find().sort({order_num: 1}).toArray(function(err, result) {
