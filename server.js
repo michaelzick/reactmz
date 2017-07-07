@@ -33,12 +33,6 @@ var MongoClient = require('mongodb').MongoClient;
 
 app.get('/', function(req, res){
   MongoClient.connect("mongodb://localhost:27017/michaelmulti",
-    {
-      // retry to connect for 60 times
-      reconnectTries: 60,
-      // wait 1 second before retrying
-      reconnectInterval: 1000
-    },
     function(err, db) {
       if(!err) {
         console.log("We are connected");
