@@ -18,15 +18,6 @@ var app = express();
 
 busboy.extend(app);
 
-var port = process.env.PORT || 80;
-var ipaddr = process.env.IP;
-
-console.log('IP: ' + ipaddr);
-
-http.createServer(app).listen(port, ipaddr, function(){
-  console.log('Express server listening on port ' + port);
-});
-
 // DB
 app.use(busboy);
 var MongoClient = require('mongodb').MongoClient;
@@ -164,3 +155,5 @@ app.set('views', __dirname + '/views');
 app.get('/', routes.index);
 app.get('/admin', routes.admin);
 app.get('/users', user.list);
+
+module.exports = app;
